@@ -39,13 +39,17 @@ Node version 10.15.3 / higher
 In case you have older Node version please install [nvm](http://npm.github.io/installation-setup-docs/installing/using-a-node-version-manager.html) to manage instances
 
 ###App pictures
-![alt text](https://ibb.co/wQSr5hH)
+https://ibb.co/wQSr5hH
+https://ibb.co/mC6h9Vd
+https://ibb.co/xgDTwV2
+https://ibb.co/3mLs7nr
+![Calc](https://ibb.co/wQSr5hH)
 
-![alt text](https://ibb.co/mC6h9Vd)
+![languagepp](https://ibb.co/mC6h9Vd)
 
-![alt text](https://ibb.co/xgDTwV2)
+![languageApp](https://ibb.co/xgDTwV2)
 
-![alt text](https://ibb.co/3mLs7nr)
+![gulp](https://ibb.co/3mLs7nr)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
