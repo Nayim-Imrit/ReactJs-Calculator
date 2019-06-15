@@ -23,9 +23,9 @@ gulp dev
 ### Commands Available
 ```python
 gulp build
-gulp:server:dev
-gulp:server:test
-gulp:server:test:dev
+gulp server:dev
+gulp server:test
+gulp server:test:dev
 ```
 ## Usage
 
