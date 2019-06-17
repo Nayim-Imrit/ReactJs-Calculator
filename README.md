@@ -29,6 +29,8 @@ gulp server:test:dev
 ```
 ## Usage
 
+Inside: react/myapp/src/client/components/dual.js, comment the firt line: import "./dual.scss";
+
 Default page will be(Calculator App): http://localhost:3000
 
 Routing to other page (Multilanguage page): http://localhost:3000/dual/1
