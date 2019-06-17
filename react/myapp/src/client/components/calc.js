@@ -17,6 +17,8 @@ class CalcContainer extends Component {
 		if (value === "AC") {
 			let stop = result.slice(0, result.length -1);
 			this.setState({result: stop});
+		} else if (value === "Del") {
+			this.setState({result:""});
 		} else if (value === "=") {
 			let re = eval(result);
 			if (re.toString().length >= 15) {
@@ -40,7 +42,7 @@ class CalcContainer extends Component {
 				</div>
 				<div className="row">
 					<div className="calc-btn column" id="calc-clear" onClick={this._clicked}>AC</div>
-					<div className="calc-btn column" id="calc-backspace" value="del">&#8676;</div>
+					<div className="calc-btn column" id="calc-backspace" onClick={this._clicked} value="del">Del</div>
 					<div className="calc-btn calc-btn-operator column" id="calc-divide" value="/" onClick={this._clicked}>/</div>
 				</div>
 				<div className="row">
