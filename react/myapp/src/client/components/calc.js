@@ -12,26 +12,34 @@ class CalcContainer extends Component {
 
 	_clicked(e) {
 		//console.log(e.currentTarget.innerHTML);//textContent
-		const value = e.currentTarget.innerHTML;
-		let result = this.state.result;
-		if (value === "AC") {
-			let stop = result.slice(0, result.length -1);
-			this.setState({result: stop});
-		} else if (value === "Del") {
-			this.setState({result:""});
-		} else if (value === "=") {
-			let re = eval(result);
-			if (re.toString().length >= 15) {
-				re = re.toString().substring(0, 9);
-				this.setState({result: re});
+		try {
+			const value = e.currentTarget.innerHTML;
+			let result = this.state.result;
+			if (value === "AC") {
+				let stop = result.slice(0, result.length -1);
+				this.setState({result: stop});
+			} else if (value === "Del") {
+				this.setState({result:""});
+			} else if (value === "=") {
+				let re = eval(result);
+				if (re.toString().length >= 15) {
+					re = re.toString().substring(0, 9);
+					this.setState({result: re});
+				} else {
+					this.setState({result: re.toString()});
+					console.log(re);
+				}
 			} else {
-				this.setState({result: re.toString()});
-				console.log(re);
+				this.setState({result: result + value});
+				console.log({result: result + value});
 			}
-		} else {
-			this.setState({result: result + value});
-			console.log({result: result + value});
-		}	  
+		} catch (err) {
+			if (err instanceof SyntaxError) {
+				console.log(err.message);
+			} else {
+				throw( err );
+			}
+		}
 	}
 
 	render() {
